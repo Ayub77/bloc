@@ -1,4 +1,5 @@
 // ignore_for_file: prefer_const_constructors
+import 'package:bloc/model/post_model.dart';
 import 'package:bloc/pages/update_and_newAdd_post.dart';
 import 'package:bloc/viewmodel/home_view_model.dart';
 import 'package:bloc/widgets/home+page_widget.dart';
@@ -53,8 +54,7 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: Colors.blue,
         foregroundColor: Colors.white,
         onPressed: () {
-          
-          Navigator.of(context).push(MaterialPageRoute(builder: (context) => UpdateAndAdd(title: "Add",id: "0",))).then((value) {
+          Navigator.of(context).push(MaterialPageRoute(builder: (context) => UpdateAndAdd(title: "Add",id: "0"))).then((value) {
             if (value) {
               viewModel.apiPostList();
             }

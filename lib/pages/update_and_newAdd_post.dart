@@ -22,7 +22,7 @@ class _UpdateAndAddState extends State<UpdateAndAdd> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    updAndAddModel.choose(widget.title, widget.post);
+    if(widget.post!=null)updAndAddModel.choose(widget.title, widget.post);
   }
   @override
   Widget build(BuildContext context) {
